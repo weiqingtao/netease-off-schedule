@@ -2,7 +2,7 @@ const shell = require('shelljs');
 const fs = require('fs');
 const schedule = require('node-schedule');
 console.log("program is starting!!程序会在每天下午六点定时关闭![Yeah!]");
-const time = '0 00 18 * * ?' //每天的两点35分执行一次
+const time = '0 00 18 * * ?' //每天下午六点执行一次
 schedule.scheduleJob(time, function () {
     const version = shell.exec('ps aux | grep NeteaseMusic', { silent: true }).stdout; //获取程序运行信息
     fs.writeFileSync('message.txt', version); //把运行信息写入文件
