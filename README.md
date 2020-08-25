@@ -7,6 +7,9 @@ node programOff.js
 
 pm2 守护进程的方式：
 pm2 start programOff.js
+
 设置开机启动：
+
 pm2 startup
+
 pm2 save
